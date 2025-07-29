@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>NU1608</WarningsNotAsErrors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>NextGenArchitecture.Persistence</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>NextGen Architecture Team</Authors>
+    <Description>Persistence layer implementing repositories, unit of work, and database contexts with Entity Framework Core and Dapper for the next-generation .NET Core architecture.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0" />
+    <PackageReference Include="Dapper" Version="2.1.24" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Npgsql" Version="8.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NextGenArchitecture.Application\NextGenArchitecture.Application.csproj" />
+    <ProjectReference Include="..\NextGenArchitecture.Domain\NextGenArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\NextGenArchitecture.SharedKernel\NextGenArchitecture.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>
